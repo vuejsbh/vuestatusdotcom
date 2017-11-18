@@ -11,7 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const loadMinified = require('./load-minified')
 
 const env = config.build.env
@@ -99,12 +99,27 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // service worker caching
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'vuestatus',
-      filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css}'],
-      minify: true,
-      stripPrefix: 'dist/'
+    new WorkboxPlugin({
+      globDirectory: 'dist',
+      globPatterns: ['**/*.{html,js,css,svg,png,jpg}'],
+      swDest: path.join('dist', 'sw.js'),
+      clientsClaim: true,
+      skipWaiting: true,
+      navigateFallback: '/index.html',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
+          handler: 'cacheFirst'
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com\//,
+          handler: 'cacheFirst'
+        },
+        {
+          urlPattern: /^https:\/\/firebasestorage\.googleapis\.com\//,
+          handler: 'cacheFirst'
+        }
+      ]
     })
   ]
 })
