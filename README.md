@@ -2,6 +2,10 @@
 
 > VueStatus
 
+## What is VueStatus?
+
+inspired on elixirstatus.com, vuestatus.com is a site for Vue developers to post their creations: new projects, blog posts and version updates.
+
 ## Build Setup
 
 ``` bash

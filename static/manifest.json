@@ -1,6 +1,6 @@
 {
   "name": "vuestatus",
-  "short_name": "vuestatus",
+  "short_name": "VueStatus",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
