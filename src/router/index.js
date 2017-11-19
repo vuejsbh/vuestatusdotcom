@@ -13,6 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/posts',
       component: AppMain,
       children: [
         {

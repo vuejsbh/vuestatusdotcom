@@ -60,6 +60,7 @@ export default {
 </script>
 
 <style lang="stylus">
-
+.tabs--fixed
+  position fixed
 </style>
 
