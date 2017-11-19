@@ -1,9 +1,7 @@
 <template>
   <v-content class="grey lighten-4">
-  <v-tabs fixed centered>
     <v-toolbar color="light-blue darken-4" dark>
       <v-toolbar-title>Vue Status</v-toolbar-title>
-
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>search</v-icon>
@@ -24,7 +22,8 @@
           </v-list>
       </v-menu>
     </v-toolbar>
-    <v-tabs-bar color="teal accent-3" >
+    <v-tabs fixed centered class="app-tabs">
+    <v-tabs-bar color="teal accent-3" :class="tabsbarclass">
       <v-tabs-slider color="green"></v-tabs-slider>
       <v-tabs-item :to="{name:'AppMainPosts'}" router>
         Posts
@@ -33,7 +32,7 @@
         News
       </v-tabs-item>
     </v-tabs-bar>
-      <v-container fluid fill-height>
+      <v-container v-scroll="onScroll" :class="containerclass">
         <router-view />
       </v-container>
     </v-tabs>
@@ -46,10 +45,22 @@ export default {
   data () {
     return {
       menu: false,
-      text: 'asdfa dsfasdfads fa'
+      text: 'asdfa dsfasdfads fa',
+      tabsbarclass: '',
+      containerclass: ''
     }
   },
   methods: {
+    onScroll (e) {
+      const offsetTop = window.pageYOffset || document.documentElement.scrollTop
+      if (offsetTop > 56) {
+        this.tabsbarclass = 'tabsfixed'
+        this.containerclass = 'containerfixed'
+      } else {
+        this.tabsbarclass = ''
+        this.containerclass = ''
+      }
+    },
     logOut () {
       this.$auth.signOut().then(() => {
         this.$router.replace('/login')
@@ -60,5 +71,13 @@ export default {
 </script>
 
 <style lang="stylus">
+.tabsfixed
+  position fixed
+  top 0
+  left 0
+  z-index 5
+.containerfixed
+  .layout
+    padding-top 50px
 </style>
 
