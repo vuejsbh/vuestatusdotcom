@@ -14,13 +14,7 @@ const DB = connection.database()
 const AUTH = connection.auth()
 const STORAGE = connection.storage()
 
-export default function install (Vue, { router }) {
-  // AUTH.onAuthStateChanged(user => {
-  //   if (!user) {
-  //     router.push({ path: 'login' })
-  //   }
-  // })
-
+export default function install (Vue) {
   Object.defineProperties(Vue.prototype, {
     $db: {
       get () {
