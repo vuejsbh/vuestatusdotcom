@@ -12,8 +12,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -27,8 +27,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -42,8 +42,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -57,8 +57,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -72,8 +72,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -87,8 +87,8 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="teal darken-4">Share</v-btn>
+          <v-btn flat color="teal darken-4">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
