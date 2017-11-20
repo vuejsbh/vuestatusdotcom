@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "vuestatusite"
+    "default": "vuestatusite",
+    "dev": "vuestatusdev",
+    "site": "vuejsbelohorizonte"
   }
 }
