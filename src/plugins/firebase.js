@@ -1,12 +1,12 @@
 import Firebase from 'firebase'
 
 const config = {
-  apiKey: 'AIzaSyC-AsNc_5U8O2smoM9Uo_BE24GRu-yiOQA',
-  authDomain: 'vuestatusite.firebaseapp.com',
-  databaseURL: 'https://vuestatusite.firebaseio.com',
-  projectId: 'vuestatusite',
-  storageBucket: 'vuestatusite.appspot.com',
-  messagingSenderId: '246919947012'
+  apiKey: 'AIzaSyA8SSldujYq67vA1Ot-MpmuiEJeaToclRU',
+  authDomain: 'clipboardwebsite.firebaseapp.com',
+  databaseURL: 'https://clipboardwebsite.firebaseio.com',
+  projectId: 'clipboardwebsite',
+  storageBucket: 'clipboardwebsite.appspot.com',
+  messagingSenderId: '229237374348'
 }
 
 const connection = !Firebase.apps.length ? Firebase.initializeApp(config) : ''
