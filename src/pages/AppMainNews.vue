@@ -1,80 +1,30 @@
 <template>
+ <transition name="slide-left">
   <v-layout row wrap>
 
+    <AppNew />
+    <AppNew />
+    <AppNew />
+    <AppNew />
+    <AppNew />
+    <AppNew />
 
-<!-- criar um component Post -->
-    <v-flex xs12 sm8 offset-sm2 class="mb-3">
-      <v-card>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">News</h3>
-            <div>Novidades sobre a comunidade Vue</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="teal darken-4">Share</v-btn>
-          <v-btn flat color="teal darken-4">Explore</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-
-        <v-flex xs12 sm8 offset-sm2 class="mb-3">
-      <v-card>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">News</h3>
-            <div>Novidades sobre a comunidade Vue</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="teal darken-4">Share</v-btn>
-          <v-btn flat color="teal darken-4">Explore</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-
-        <v-flex xs12 sm8 offset-sm2 class="mb-3">
-      <v-card>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">News</h3>
-            <div>Novidades sobre a comunidade Vue</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="teal darken-4">Share</v-btn>
-          <v-btn flat color="teal darken-4">Explore</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-
-        <v-flex xs12 sm8 offset-sm2 class="mb-3">
-      <v-card>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">News</h3>
-            <div>Novidades sobre a comunidade Vue</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="teal darken-4">Share</v-btn>
-          <v-btn flat color="teal darken-4">Explore</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-
-    
-
-  
     </v-layout>
+  </transition>
 </template>
 
 <script>
-export default {
+import AppNew from '@/components/AppNew.vue'
 
+export default {
+  components: { AppNew },
+  data () {
+    return {
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="stylus">
 
 </style>

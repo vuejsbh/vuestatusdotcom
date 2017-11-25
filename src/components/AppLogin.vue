@@ -48,16 +48,4 @@ export default {
     position: fixed
     text-align: center
     width: 100%
-    .firebaseui-info-bar
-      margin-top: 20px
-    .mdl-shadow--2dp
-      box-shadow: none
-    .mdl-progress
-      height: 5px
-    div.mdl-progress::after
-      color: black
-      content: 'Conectando...'
-      display: block
-      margin: 20px auto
-      text-align: center
 </style>

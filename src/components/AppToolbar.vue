@@ -1,33 +1,21 @@
 <template>
     <v-toolbar dark class="vs-toolbar" :class="toolbarClass">
       <img src="../..//static/img/logo/vuestatus-logo.svg" alt="VueStatus Logo" class="vs-logo">
-      <v-toolbar-title class="vs-title">
+      <div class="vs-title">
         Vue Status
-      </v-toolbar-title>
+      </div>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>search</v-icon>
       </v-btn>
-      <v-menu v-model="menu">
-        <v-btn icon slot="activator" dark class="settings">
-          <v-icon>more_vert</v-icon>
-        </v-btn>
-        <v-list>
-          <v-list-tile @click='logOut'>
-            <v-list-tile-action>
-              <v-btn icon ripple>
-                <v-icon color="grey lighten-1">exit_to_app</v-icon>
-              </v-btn>
-            </v-list-tile-action>
-            <v-list-tile-title>Exit</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
+      <AppToolbarMenu />
     </v-toolbar>
 </template>
 
 <script>
+import AppToolbarMenu from '@/components/AppToolbarMenu.vue'
 export default {
+  components: { AppToolbarMenu },
   name: 'AppToolbar',
   data () {
     return {
@@ -51,50 +39,53 @@ export default {
 
 <style lang="stylus">
 .vs-toolbar
-  height 100px
+  height 150px
   background-color #1c3c59 !important
+  background-image url("../..//static/img/style/vs-header-bg.svg")
+  background-size: cover
   .vs-logo
-    transition: all .2s
-    height 160px
-    top 25px
+    height 200px
+    z-index 5
+    bottom -90px
     left 20px
     position absolute
-    z-index 5
+    transition bottom .3s
+    z-index 3
   .vs-title
-    top 36px
     position absolute
     z-index 5
-    left 220px
+    bottom 25px
+    left 265px
     font-size 38px
 
 .vs-toolbar-xs
   .vs-logo
-    height 60px
-    top 20px
-    left 0px
+    height 70px
+    bottom 20px
+    left 20px
   .vs-title
-    top 40px
-    left 84px
-    font-size 20px
+    bottom 45px
+    left 135px
+    font-size 28px
 
 .vs-toolbar-sm
   .vs-logo
-    height 100px
-    top 30px
-    left 5px
+    height 140px
+    bottom -30px
+    left 20px
   .vs-title
-    top 40px
-    left 140px
+    bottom 25px
+    left 200px
     font-size 32px
 
 .vs-toolbar-md
   .vs-logo
-    height 140px
-    top 30px
+    height 160px
+    bottom -70px
     left 20px
   .vs-title
-    top 40px
-    left 190px
-    font-size 32px
+    bottom 25px
+    left 225px
+    font-size 36px
 
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <v-layout row wrap class="vs-layout">
+ <transition name="slide-right">
+  <v-layout row wrap>
 
     <AppPost />
     <AppPost />
@@ -10,7 +11,6 @@
     <AppPost />
     <AppPost />
    
-
     <v-btn
       color="light-blue accent-3"
       dark
@@ -22,6 +22,7 @@
       <v-icon>add</v-icon>
     </v-btn>
     </v-layout>
+ </transition>
 </template>
 
 <script>
@@ -38,6 +39,5 @@ export default {
 </script>
 
 <style lang="stylus">
-.vs-layout
-  padding-top 150px
+
 </style>

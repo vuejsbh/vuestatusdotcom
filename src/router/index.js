@@ -17,12 +17,12 @@ export default new Router({
       component: AppMain,
       children: [
         {
-          path: '/posts',
+          path: 'posts',
           name: 'AppMainPosts',
           component: AppMainPosts
         },
         {
-          path: '/news',
+          path: 'news',
           name: 'AppMainNews',
           component: AppMainNews
         }
